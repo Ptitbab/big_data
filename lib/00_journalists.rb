@@ -26,8 +26,6 @@ def compte_5char_elements(array)
     puts result
 end
 
-
-
 def start_cap_letter(array)
     array.count { |s| s[1] =~ /[[:upper]]/ } 
 end
@@ -44,10 +42,22 @@ def find_index(array)
     array.find_index("@epenser")
 end
 
-def repartition_by_length(array)
-    array.map do |element|
-        element.length
-    end
+#def repartition_by_length(array)
+#    length = array.map do |element|
+#        element.length
+#    end
+#end
+
+def perform(array)
+    puts find_shortest_element(array)
+    puts compte_5char_elements(array)
+    puts start_cap_letter(array)
+    puts sort_by_alphabet(array)
+    puts sort_by_size(array)
+    puts find_index(array)
+    puts repartition_by_length(array)
 end
 
-puts repartition_by_length(journalists)
+perform(journalists)
+
+
